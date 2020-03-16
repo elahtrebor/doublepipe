@@ -1,6 +1,6 @@
-# doublepipe<pre>
+# doublepipe
 A terminal utility that allows to pipe remote session output to local resources.
-
+<pre>
 This code based on: http://rachid.koucha.free.fr/tech_corner/pty_pdip.html - examples for psuedo terminals.
 
 
@@ -22,8 +22,9 @@ Tacacs+ Server -  public  :
         
 ROUTER1>exit
 $exit
+</pre>
 -----------------------------------------------------------------------------------------------------------------------
-
+</p>
 How does this work?  
 
 The program spawns a psuedo terminal and parses the input sent from the user looking for a "double pipe".
@@ -41,5 +42,5 @@ The first command "show tacacs" is sent to the far end and the output of that co
 
 This code is BETA release currently and needs to implement password hiding as well as more testing.
 
-
+</p>
 
