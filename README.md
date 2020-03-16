@@ -45,5 +45,14 @@ The first command "show tacacs" is sent to the far end and the output of that co
 
 This code is BETA release currently and needs to implement password hiding as well as more testing.
 
+Need to work on the following:
+
+- Psuedo terminal shows password.
+- The terminal needs to interpret escape and control sequences.
+- The program currently writes to local files to pass data from the parent process to the child. Need to implement shared memory.
+- The parser needs its own object  IE: typedef struct parser {  .... }
+- Checks for failure to open files.
+- research as this could be re-developed using a legitimate terminal library versus the pseudo terminal as the PIPE code can be ported easily.
+
 </p>
 
