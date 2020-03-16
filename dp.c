@@ -92,7 +92,6 @@ fd_set fd_in;
       {
         // If data on standard input
         if (FD_ISSET(0, &fd_in)) {
-     // THIS IS THE COMMAND INPUT THAT IS SENT TO THE FAR END  **********************************************
              rc = read(0, input, sizeof(input));
             // parse the command input and strip anything after a double pipe
           char *cmdbuf = strdup(input);
@@ -121,10 +120,9 @@ fd_set fd_in;
              fclose(fp);
 
             }
-           
+// THIS IS THE COMMAND INPUT THAT IS SENT TO THE FAR END  **********************************************           
             write(fdm, input, rc);   // THIS SENDS THE DATA TO THE FAR END
             if(cmdflag) { write(fdm, "\n", 1); }
-           // write(fdm, "ls\n", 3);   // THIS SENDS THE DATA TO THE FAR END
           }
           else {
             if (rc < 0) {
@@ -145,15 +143,12 @@ fd_set fd_in;
           fclose(fp);
 
        // if we have an EXEC CMD then read the command
-
           fp = fopen(".dp_cmd", "r");
           fgets(cmdbuff, MAX_INPUT, fp);
           fclose(fp);
           rc = read(fdm, input, sizeof(input));
-   //   printf("input :: '%s'\n", input);
           if (rc > 0) {
             // THIS IS THE OUTPUT COMING BACK AFTER COMMAND IS SENT ***************************************************
-       //    write(1, input, rc); // THIS WRITES BACK TO STDOUT
       // IF we have an EXEC then PIPE the return output to the local shell             
     if(strstr(buff, "EXEC")){  
               FILE* file = popen(cmdbuff,"w");
@@ -162,7 +157,7 @@ fd_set fd_in;
                
            }  else {
 
-                     write(1, input, rc); // THIS WRITES BACK TO STDOUT
+                     write(1, input, rc); //
            }
          
               
