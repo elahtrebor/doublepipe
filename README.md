@@ -31,7 +31,7 @@ How does this work?
 The program spawns a psuedo terminal and parses the input sent from the user looking for a "double pipe".
 If a double pipe is encountered the program splits the command at the double pipe and only sends the first 
 command while saving the second command in a buffer. 
-When the output of the first command is returned from the remote session, the program opens a pipe to send 
+When the output of the first command is returned from the remote session, the program opens a local pipe to send 
 the returned output to the previously saved buffer command. 
 
 In the example above the command "show tacacs||grep -i server", the parser splits the input into two parts:
