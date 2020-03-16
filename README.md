@@ -1,8 +1,9 @@
 # doublepipe
 A terminal utility that allows to pipe remote session output to local resources.
-<pre>
+<br>
 This code based on: http://rachid.koucha.free.fr/tech_corner/pty_pdip.html - examples for psuedo terminals.
-
+<br>
+<pre>
 
 Compile with:  gcc -o dp dp.c 
 
@@ -34,10 +35,12 @@ When the output of the first command is returned from the remote session, the pr
 the returned output to the previously saved buffer command. 
 
 In the example above the command "show tacacs||grep -i server", the parser splits the input into two parts:
-
+</p>
+<pre>
 array[0] = "show tacacs"
 array[1] = "grep -i server"
-
+</pre>
+<p>
 The first command "show tacacs" is sent to the far end and the output of that command is piped locally to "grep -i server".
 
 This code is BETA release currently and needs to implement password hiding as well as more testing.
