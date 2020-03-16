@@ -52,7 +52,7 @@ Need to work on the following:
 - The program currently writes to local files to pass data from the parent process to the child. Need to implement shared memory.
 - The parser needs its own object  IE: typedef struct parser {  .... }
 - Checks for failure to open files.
-- research as this could be re-developed using a legitimate terminal library versus the pseudo terminal as the PIPE code can be ported easily.
+- research as this could be re-developed using a legitimate terminal library versus the pseudo terminal since the PIPE code can be ported easily.
 
 </p>
 
