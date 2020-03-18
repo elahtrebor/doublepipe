@@ -45,6 +45,8 @@ The first command "show tacacs" is sent to the far end and the output of that co
 
 This code is BETA release currently and needs to implement password hiding as well as more testing.
 
+Tested on Ubuntu, Windows WSL Ubuntu 16.4, Windows 10/Cygwin64, Redhat 7.x, Linux Mint.
+
 Need to work on the following:
 
 - Psuedo terminal shows password.
