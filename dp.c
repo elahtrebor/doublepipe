@@ -10,10 +10,13 @@
 #include <sys/ioctl.h>
 #include <string.h>
 #include <ctype.h>
+#include <termios.h>
 
 #define MAX_INPUT 1024
 #define BINDIR "/usr/bin"
 #define MAGIC 23       // Just kidding, I am out of magic today..
+void cfmakeraw(struct termios *termios_p);
+
 char array[2][MAX_INPUT];
 
 #define DEBUG 0
