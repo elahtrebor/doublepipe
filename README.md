@@ -110,7 +110,7 @@ Commands:
 ## 🛠 Installation
 
 ```bash
-git clone https://github.com/yourusername/dp.git
+git clone https://github.com/elahtrebor/dp.git
 cd dp
 cc -Wall -Wextra -O2 dp_featured.c -o dp
 ```
