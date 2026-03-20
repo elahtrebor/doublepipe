@@ -1,2 +1,2 @@
-doublepipe:
-	cc doublepipe.c -D_DEFAULT_SOURCE
+dp:
+	 cc -Wall -Wextra -O2 dp.c -o dp
