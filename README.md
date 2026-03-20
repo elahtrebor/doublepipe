@@ -5,8 +5,8 @@ This code based on: http://rachid.koucha.free.fr/tech_corner/pty_pdip.html - exa
 <br>
 <pre>
 
-Compile with:  gcc -o dp dp.c 
-
+Compile with:  cc -Wall -Wextra -O2 dp.c -o dp
+ 
 Example:
 
  $./dp /bin/bash
